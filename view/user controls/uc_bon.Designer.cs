@@ -64,6 +64,30 @@
             choisir_fournisseur = new Button();
             button1 = new Button();
             button3 = new Button();
+            textBox1 = new TextBox();
+            label19 = new Label();
+            label22 = new Label();
+            poids = new TextBox();
+            label23 = new Label();
+            nombre = new TextBox();
+            label24 = new Label();
+            designation = new TextBox();
+            label25 = new Label();
+            label20 = new Label();
+            textBox2 = new TextBox();
+            label21 = new Label();
+            button2 = new Button();
+            label26 = new Label();
+            textBox3 = new TextBox();
+            label27 = new Label();
+            textBox4 = new TextBox();
+            label28 = new Label();
+            textBox5 = new TextBox();
+            label29 = new Label();
+            textBox6 = new TextBox();
+            label30 = new Label();
+            textBox7 = new TextBox();
+            label31 = new Label();
             SuspendLayout();
             // 
             // fadresse
@@ -384,11 +408,245 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(200, 1157);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(124, 31);
+            textBox1.TabIndex = 94;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 12F);
+            label19.Location = new Point(29, 1157);
+            label19.Name = "label19";
+            label19.Size = new Size(160, 32);
+            label19.TabIndex = 93;
+            label19.Text = "Prix par unité:";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label22.Location = new Point(31, 987);
+            label22.Name = "label22";
+            label22.Size = new Size(158, 32);
+            label22.TabIndex = 88;
+            label22.Text = "Commande: ";
+            // 
+            // poids
+            // 
+            poids.Location = new Point(544, 1102);
+            poids.Name = "poids";
+            poids.Size = new Size(123, 31);
+            poids.TabIndex = 87;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 12F);
+            label23.Location = new Point(363, 1099);
+            label23.Name = "label23";
+            label23.Size = new Size(175, 32);
+            label23.TabIndex = 86;
+            label23.Text = "Poids (en Kgs) :";
+            // 
+            // nombre
+            // 
+            nombre.Location = new Point(200, 1102);
+            nombre.Name = "nombre";
+            nombre.Size = new Size(124, 31);
+            nombre.TabIndex = 85;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 12F);
+            label24.Location = new Point(31, 1099);
+            label24.Name = "label24";
+            label24.Size = new Size(114, 32);
+            label24.TabIndex = 84;
+            label24.Text = "Nombre :";
+            // 
+            // designation
+            // 
+            designation.Location = new Point(200, 1046);
+            designation.Name = "designation";
+            designation.Size = new Size(298, 31);
+            designation.TabIndex = 96;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 12F);
+            label25.Location = new Point(31, 1046);
+            label25.Name = "label25";
+            label25.Size = new Size(154, 32);
+            label25.TabIndex = 95;
+            label25.Text = "Désignation :";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 12F);
+            label20.Location = new Point(447, 1623);
+            label20.Name = "label20";
+            label20.Size = new Size(77, 32);
+            label20.TabIndex = 97;
+            label20.Text = "Total: ";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(330, 1207);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(117, 31);
+            textBox2.TabIndex = 99;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 12F);
+            label21.Location = new Point(29, 1207);
+            label21.Name = "label21";
+            label21.Size = new Size(276, 32);
+            label21.TabIndex = 98;
+            label21.Text = "Coût transport par unité:";
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 10F);
+            button2.Location = new Point(708, 1673);
+            button2.Name = "button2";
+            button2.Size = new Size(275, 41);
+            button2.TabIndex = 100;
+            button2.Text = "Imprimer";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label26.Location = new Point(31, 1295);
+            label26.Name = "label26";
+            label26.Size = new Size(370, 32);
+            label26.TabIndex = 103;
+            label26.Text = "Information complémentaires: ";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(200, 1361);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(124, 31);
+            textBox3.TabIndex = 102;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 12F);
+            label27.Location = new Point(31, 1358);
+            label27.Name = "label27";
+            label27.Size = new Size(55, 32);
+            label27.TabIndex = 101;
+            label27.Text = "RC :";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(200, 1412);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(124, 31);
+            textBox4.TabIndex = 105;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Font = new Font("Segoe UI", 12F);
+            label28.Location = new Point(31, 1409);
+            label28.Name = "label28";
+            label28.Size = new Size(109, 32);
+            label28.TabIndex = 104;
+            label28.Text = "Adresse :";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(200, 1462);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(124, 31);
+            textBox5.TabIndex = 107;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 12F);
+            label29.Location = new Point(31, 1459);
+            label29.Name = "label29";
+            label29.Size = new Size(47, 32);
+            label29.TabIndex = 106;
+            label29.Text = "AI :";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(200, 1514);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(124, 31);
+            textBox6.TabIndex = 109;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Font = new Font("Segoe UI", 12F);
+            label30.Location = new Point(31, 1513);
+            label30.Name = "label30";
+            label30.Size = new Size(62, 32);
+            label30.TabIndex = 108;
+            label30.Text = "NIF :";
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(200, 1566);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(124, 31);
+            textBox7.TabIndex = 111;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 12F);
+            label31.Location = new Point(31, 1565);
+            label31.Name = "label31";
+            label31.Size = new Size(63, 32);
+            label31.TabIndex = 110;
+            label31.Text = "NIS :";
+            // 
             // uc_bon
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(textBox7);
+            Controls.Add(label31);
+            Controls.Add(textBox6);
+            Controls.Add(label30);
+            Controls.Add(textBox5);
+            Controls.Add(label29);
+            Controls.Add(textBox4);
+            Controls.Add(label28);
+            Controls.Add(label26);
+            Controls.Add(textBox3);
+            Controls.Add(label27);
+            Controls.Add(button2);
+            Controls.Add(textBox2);
+            Controls.Add(label21);
+            Controls.Add(label20);
+            Controls.Add(designation);
+            Controls.Add(label25);
+            Controls.Add(textBox1);
+            Controls.Add(label19);
+            Controls.Add(label22);
+            Controls.Add(poids);
+            Controls.Add(label23);
+            Controls.Add(nombre);
+            Controls.Add(label24);
             Controls.Add(button3);
             Controls.Add(button1);
             Controls.Add(choisir_fournisseur);
@@ -426,7 +684,7 @@
             Controls.Add(fnom);
             Controls.Add(label1);
             Name = "uc_bon";
-            Size = new Size(1025, 1096);
+            Size = new Size(1025, 1761);
             Load += uc_bon_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -470,5 +728,29 @@
         private Button choisir_fournisseur;
         private Button button1;
         private Button button3;
+        private TextBox textBox1;
+        private Label label19;
+        private Label label22;
+        private TextBox poids;
+        private Label label23;
+        private TextBox nombre;
+        private Label label24;
+        private TextBox designation;
+        private Label label25;
+        private Label label20;
+        private TextBox textBox2;
+        private Label label21;
+        private Button button2;
+        private Label label26;
+        private TextBox textBox3;
+        private Label label27;
+        private TextBox textBox4;
+        private Label label28;
+        private TextBox textBox5;
+        private Label label29;
+        private TextBox textBox6;
+        private Label label30;
+        private TextBox textBox7;
+        private Label label31;
     }
 }
