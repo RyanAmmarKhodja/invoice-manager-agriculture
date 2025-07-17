@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             fadresse = new TextBox();
             label11 = new Label();
             facture = new TextBox();
@@ -71,23 +72,28 @@
             label23 = new Label();
             nombre = new TextBox();
             label24 = new Label();
-            designation = new TextBox();
             label25 = new Label();
             label20 = new Label();
             textBox2 = new TextBox();
             label21 = new Label();
             button2 = new Button();
             label26 = new Label();
-            textBox3 = new TextBox();
+            crc = new TextBox();
             label27 = new Label();
-            textBox4 = new TextBox();
+            cadresse = new TextBox();
             label28 = new Label();
-            textBox5 = new TextBox();
+            cai = new TextBox();
             label29 = new Label();
-            textBox6 = new TextBox();
+            cnif = new TextBox();
             label30 = new Label();
-            textBox7 = new TextBox();
+            cnis = new TextBox();
             label31 = new Label();
+            ajouter_produit = new Button();
+            combo = new ComboBox();
+            gestionProduitBindingSource = new BindingSource(components);
+            label32 = new Label();
+            button4 = new Button();
+            ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).BeginInit();
             SuspendLayout();
             // 
             // fadresse
@@ -137,9 +143,9 @@
             label9.Font = new Font("Segoe UI", 12F);
             label9.Location = new Point(31, 529);
             label9.Name = "label9";
-            label9.Size = new Size(85, 32);
+            label9.Size = new Size(78, 32);
             label9.TabIndex = 61;
-            label9.Text = "N° BL :";
+            label9.Text = "N°BL :";
             // 
             // ftel
             // 
@@ -469,13 +475,6 @@
             label24.TabIndex = 84;
             label24.Text = "Nombre :";
             // 
-            // designation
-            // 
-            designation.Location = new Point(200, 1046);
-            designation.Name = "designation";
-            designation.Size = new Size(298, 31);
-            designation.TabIndex = 96;
-            // 
             // label25
             // 
             label25.AutoSize = true;
@@ -490,7 +489,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 12F);
-            label20.Location = new Point(447, 1623);
+            label20.Location = new Point(544, 1207);
             label20.Name = "label20";
             label20.Size = new Size(77, 32);
             label20.TabIndex = 97;
@@ -529,16 +528,16 @@
             label26.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label26.Location = new Point(31, 1295);
             label26.Name = "label26";
-            label26.Size = new Size(370, 32);
+            label26.Size = new Size(180, 32);
             label26.TabIndex = 103;
-            label26.Text = "Information complémentaires: ";
+            label26.Text = "Coordonnées :";
             // 
-            // textBox3
+            // crc
             // 
-            textBox3.Location = new Point(200, 1361);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(124, 31);
-            textBox3.TabIndex = 102;
+            crc.Location = new Point(200, 1361);
+            crc.Name = "crc";
+            crc.Size = new Size(450, 31);
+            crc.TabIndex = 102;
             // 
             // label27
             // 
@@ -550,12 +549,12 @@
             label27.TabIndex = 101;
             label27.Text = "RC :";
             // 
-            // textBox4
+            // cadresse
             // 
-            textBox4.Location = new Point(200, 1412);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(124, 31);
-            textBox4.TabIndex = 105;
+            cadresse.Location = new Point(200, 1412);
+            cadresse.Name = "cadresse";
+            cadresse.Size = new Size(450, 31);
+            cadresse.TabIndex = 105;
             // 
             // label28
             // 
@@ -567,12 +566,12 @@
             label28.TabIndex = 104;
             label28.Text = "Adresse :";
             // 
-            // textBox5
+            // cai
             // 
-            textBox5.Location = new Point(200, 1462);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(124, 31);
-            textBox5.TabIndex = 107;
+            cai.Location = new Point(200, 1462);
+            cai.Name = "cai";
+            cai.Size = new Size(450, 31);
+            cai.TabIndex = 107;
             // 
             // label29
             // 
@@ -584,12 +583,12 @@
             label29.TabIndex = 106;
             label29.Text = "AI :";
             // 
-            // textBox6
+            // cnif
             // 
-            textBox6.Location = new Point(200, 1514);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(124, 31);
-            textBox6.TabIndex = 109;
+            cnif.Location = new Point(200, 1514);
+            cnif.Name = "cnif";
+            cnif.Size = new Size(450, 31);
+            cnif.TabIndex = 109;
             // 
             // label30
             // 
@@ -601,12 +600,12 @@
             label30.TabIndex = 108;
             label30.Text = "NIF :";
             // 
-            // textBox7
+            // cnis
             // 
-            textBox7.Location = new Point(200, 1566);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(124, 31);
-            textBox7.TabIndex = 111;
+            cnis.Location = new Point(200, 1566);
+            cnis.Name = "cnis";
+            cnis.Size = new Size(450, 31);
+            cnis.TabIndex = 111;
             // 
             // label31
             // 
@@ -618,27 +617,74 @@
             label31.TabIndex = 110;
             label31.Text = "NIS :";
             // 
+            // ajouter_produit
+            // 
+            ajouter_produit.Location = new Point(544, 1049);
+            ajouter_produit.Name = "ajouter_produit";
+            ajouter_produit.Size = new Size(123, 34);
+            ajouter_produit.TabIndex = 112;
+            ajouter_produit.Text = "Ajouter produit";
+            ajouter_produit.UseVisualStyleBackColor = true;
+            ajouter_produit.Click += ajouter_produit_Click;
+            // 
+            // combo
+            // 
+            combo.AllowDrop = true;
+            combo.FormattingEnabled = true;
+            combo.Location = new Point(200, 1049);
+            combo.Name = "combo";
+            combo.Size = new Size(320, 33);
+            combo.TabIndex = 113;
+            // 
+            // gestionProduitBindingSource
+            // 
+            gestionProduitBindingSource.DataSource = typeof(models.GestionProduit.GestionProduit);
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 12F);
+            label32.Location = new Point(544, 1157);
+            label32.Name = "label32";
+            label32.Size = new Size(77, 32);
+            label32.TabIndex = 114;
+            label32.Text = "Total: ";
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 10F);
+            button4.Location = new Point(217, 1292);
+            button4.Name = "button4";
+            button4.Size = new Size(275, 41);
+            button4.TabIndex = 115;
+            button4.Text = "Enregistrer les modifications";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // uc_bon
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            Controls.Add(textBox7);
+            Controls.Add(button4);
+            Controls.Add(label32);
+            Controls.Add(combo);
+            Controls.Add(ajouter_produit);
+            Controls.Add(cnis);
             Controls.Add(label31);
-            Controls.Add(textBox6);
+            Controls.Add(cnif);
             Controls.Add(label30);
-            Controls.Add(textBox5);
+            Controls.Add(cai);
             Controls.Add(label29);
-            Controls.Add(textBox4);
+            Controls.Add(cadresse);
             Controls.Add(label28);
             Controls.Add(label26);
-            Controls.Add(textBox3);
+            Controls.Add(crc);
             Controls.Add(label27);
             Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(label21);
             Controls.Add(label20);
-            Controls.Add(designation);
             Controls.Add(label25);
             Controls.Add(textBox1);
             Controls.Add(label19);
@@ -686,6 +732,7 @@
             Name = "uc_bon";
             Size = new Size(1025, 1761);
             Load += uc_bon_Load;
+            ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -742,15 +789,20 @@
         private Label label21;
         private Button button2;
         private Label label26;
-        private TextBox textBox3;
+        private TextBox crc;
         private Label label27;
-        private TextBox textBox4;
+        private TextBox cadresse;
         private Label label28;
-        private TextBox textBox5;
+        private TextBox cai;
         private Label label29;
-        private TextBox textBox6;
+        private TextBox cnif;
         private Label label30;
-        private TextBox textBox7;
+        private TextBox cnis;
         private Label label31;
+        private Button ajouter_produit;
+        private ComboBox combo;
+        private BindingSource gestionProduitBindingSource;
+        private Label label32;
+        private Button button4;
     }
 }

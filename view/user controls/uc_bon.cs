@@ -1,4 +1,7 @@
-﻿using StockIt_2.view.forms;
+﻿using StockIt_2.models;
+using StockIt_2.models.GestionCoords;
+using StockIt_2.models.GestionProduit;
+using StockIt_2.view.forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace StockIt_2.view.user_controls
 {
     public partial class uc_bon : UserControl
     {
+        private GestionCoords coords = new GestionCoords();
         public uc_bon()
         {
             InitializeComponent();
@@ -73,7 +78,53 @@ namespace StockIt_2.view.user_controls
 
         private void uc_bon_Load(object sender, EventArgs e)
         {
+            // Récupération des produits pour le comboBox
+            GestionProduit gestion = new GestionProduit();
+            var produits = gestion.GetProduits();
+            combo.DataSource = produits;
+            combo.DisplayMember = "Designation";
+            combo.ValueMember = "Designation";
 
+            // Récupération des coordonnées de l'entreprise
+            
+            var coordonnes = coords.GetCoords();
+            
+            crc.Text = coordonnes.rc;
+            cai.Text = coordonnes.ai;
+            cnif.Text = coordonnes.nif;
+            cnis.Text = coordonnes.nis;
+            cadresse.Text = coordonnes.adresse;
+            
+            
+        }
+
+        private void ajouter_produit_Click(object sender, EventArgs e)
+        {
+            AjouterProduit produitForm = new AjouterProduit();
+            produitForm.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var maj = MessageBox.Show("Voulez-vous vraiment modifier les coordonnées de l'entreprise ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(maj == DialogResult.Yes)
+            {
+                var nouvellesCoordonnes = new Coords
+                {
+                    rc = crc.Text.Trim(),
+                    ai = cai.Text.Trim(),
+                    nif = cnif.Text.Trim(),
+                    nis = cnis.Text.Trim(),
+                    adresse = cadresse.Text
+                };
+
+
+
+                // Appel de la méthode pour modifier les coordonnées
+                var coordonnes = coords.editCoords(nouvellesCoordonnes);
+                MessageBox.Show("Coordonnées mises à jour avec succès.");
+            }
+            
         }
     }
 }
