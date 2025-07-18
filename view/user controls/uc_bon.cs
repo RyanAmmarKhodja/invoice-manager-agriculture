@@ -21,10 +21,12 @@ namespace StockIt_2.view.user_controls
         public uc_bon()
         {
             InitializeComponent();
+            calculer_ttc();
+
         }
         private void uc_bon_Load(object sender, EventArgs e)
         {
-            
+
 
             // Récupération des produits pour le comboBox
             GestionProduit gestion = new GestionProduit();
@@ -102,7 +104,7 @@ namespace StockIt_2.view.user_controls
             NavigationMaster.retour();
         }
 
-        
+
 
         private void ajouter_produit_Click(object sender, EventArgs e)
         {
@@ -133,38 +135,67 @@ namespace StockIt_2.view.user_controls
 
         }
 
-        
 
-        private void verify_poids_nbr()
+
+        private void imprimer_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(poids.Text) && string.IsNullOrEmpty(nombre.Text))
-            {
-                // Nothing entered yet, enable both
-                poids.Enabled = true;
-                nombre.Enabled = true;
-            }
-            else if (!string.IsNullOrEmpty(poids.Text))
-            {
-                // poids has value, disable nombre
-                poids.Enabled = true;
-                nombre.Enabled = false;
-            }
-            else if (!string.IsNullOrEmpty(nombre.Text))
-            {
-                // nombre has value, disable poids
-                poids.Enabled = false;
-                nombre.Enabled = true;
-            }
+
         }
 
-        private void poids_TextChanged(object sender, EventArgs e)
+        private void calculer_ttc()
         {
-            verify_poids_nbr();
+
+            decimal _nombre = 0;
+            decimal _poids = 0;
+            decimal _prix = 0;
+            decimal _tpv = 0;
+
+            //total labels 
+            decimal tpv = 0;
+            decimal ttc = 0;
+            decimal tg = 0;
+
+            decimal.TryParse(nombre.Text, out _nombre);
+            decimal.TryParse(poids.Text, out _poids);
+            decimal.TryParse(prix_unitaire.Text, out _prix);
+            decimal.TryParse(cout_transport.Text, out _tpv);
+
+
+            if (_poids > 0) // Check if poids has a meaningful value (greater than 0)
+            {
+                ttc = _poids * _prix;
+            }
+            else if (_nombre > 0) // Only if poids is 0 or not entered, then use nombre
+            {
+                ttc = _nombre * _prix;
+            }
+
+            tpv = _tpv*_nombre;
+            tg = tpv+ttc;
+            total_general.Text = tg.ToString("F2") + " DZD";
+            total_tpv.Text = tpv.ToString("F2") + " DZD";
+            total_ttc.Text = ttc.ToString("F2") + " DZD";
+        }
+
+
+        private void prix_unitaire_TextChanged(object sender, EventArgs e)
+        {
+            calculer_ttc();
         }
 
         private void nombre_TextChanged(object sender, EventArgs e)
         {
-            verify_poids_nbr();
+            calculer_ttc();
+        }
+
+        private void poids_TextChanged(object sender, EventArgs e)
+        {
+            calculer_ttc();
+        }
+
+        private void tpv_TextChanged(object sender, EventArgs e)
+        {
+            calculer_ttc();
         }
     }
 }

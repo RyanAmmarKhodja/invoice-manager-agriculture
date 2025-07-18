@@ -74,9 +74,9 @@
             label24 = new Label();
             label25 = new Label();
             total_transport = new Label();
-            textBox2 = new TextBox();
+            cout_transport = new TextBox();
             label21 = new Label();
-            button2 = new Button();
+            imprimer = new Button();
             label26 = new Label();
             crc = new TextBox();
             label27 = new Label();
@@ -94,6 +94,9 @@
             total_des = new Label();
             button4 = new Button();
             tg = new Label();
+            total_ttc = new Label();
+            total_tpv = new Label();
+            total_general = new Label();
             ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -421,6 +424,7 @@
             prix_unitaire.Name = "prix_unitaire";
             prix_unitaire.Size = new Size(124, 31);
             prix_unitaire.TabIndex = 94;
+            prix_unitaire.TextChanged += prix_unitaire_TextChanged;
             // 
             // label19
             // 
@@ -498,12 +502,13 @@
             total_transport.TabIndex = 97;
             total_transport.Text = "Total :  ";
             // 
-            // textBox2
+            // cout_transport
             // 
-            textBox2.Location = new Point(330, 1207);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(117, 31);
-            textBox2.TabIndex = 99;
+            cout_transport.Location = new Point(330, 1207);
+            cout_transport.Name = "cout_transport";
+            cout_transport.Size = new Size(117, 31);
+            cout_transport.TabIndex = 99;
+            cout_transport.TextChanged += tpv_TextChanged;
             // 
             // label21
             // 
@@ -515,15 +520,16 @@
             label21.TabIndex = 98;
             label21.Text = "Coût transport par unité:";
             // 
-            // button2
+            // imprimer
             // 
-            button2.Font = new Font("Segoe UI", 10F);
-            button2.Location = new Point(708, 1673);
-            button2.Name = "button2";
-            button2.Size = new Size(275, 41);
-            button2.TabIndex = 100;
-            button2.Text = "Imprimer";
-            button2.UseVisualStyleBackColor = true;
+            imprimer.Font = new Font("Segoe UI", 10F);
+            imprimer.Location = new Point(708, 1673);
+            imprimer.Name = "imprimer";
+            imprimer.Size = new Size(275, 41);
+            imprimer.TabIndex = 100;
+            imprimer.Text = "Imprimer";
+            imprimer.UseVisualStyleBackColor = true;
+            imprimer.Click += imprimer_Click;
             // 
             // label26
             // 
@@ -674,11 +680,44 @@
             tg.TabIndex = 116;
             tg.Text = "TG :";
             // 
+            // total_ttc
+            // 
+            total_ttc.AutoSize = true;
+            total_ttc.Font = new Font("Segoe UI", 12F);
+            total_ttc.Location = new Point(623, 1157);
+            total_ttc.Name = "total_ttc";
+            total_ttc.Size = new Size(27, 32);
+            total_ttc.TabIndex = 117;
+            total_ttc.Text = "0";
+            // 
+            // total_tpv
+            // 
+            total_tpv.AutoSize = true;
+            total_tpv.Font = new Font("Segoe UI", 12F);
+            total_tpv.Location = new Point(623, 1204);
+            total_tpv.Name = "total_tpv";
+            total_tpv.Size = new Size(27, 32);
+            total_tpv.TabIndex = 118;
+            total_tpv.Text = "0";
+            // 
+            // total_general
+            // 
+            total_general.AutoSize = true;
+            total_general.Font = new Font("Segoe UI", 12F);
+            total_general.Location = new Point(623, 1245);
+            total_general.Name = "total_general";
+            total_general.Size = new Size(27, 32);
+            total_general.TabIndex = 119;
+            total_general.Text = "0";
+            // 
             // uc_bon
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(total_general);
+            Controls.Add(total_tpv);
+            Controls.Add(total_ttc);
             Controls.Add(tg);
             Controls.Add(button4);
             Controls.Add(total_des);
@@ -695,8 +734,8 @@
             Controls.Add(label26);
             Controls.Add(crc);
             Controls.Add(label27);
-            Controls.Add(button2);
-            Controls.Add(textBox2);
+            Controls.Add(imprimer);
+            Controls.Add(cout_transport);
             Controls.Add(label21);
             Controls.Add(total_transport);
             Controls.Add(label25);
@@ -799,9 +838,9 @@
         private TextBox designation;
         private Label label25;
         private Label total_transport;
-        private TextBox textBox2;
+        private TextBox cout_transport;
         private Label label21;
-        private Button button2;
+        private Button imprimer;
         private Label label26;
         private TextBox crc;
         private Label label27;
@@ -819,5 +858,8 @@
         private Label total_des;
         private Button button4;
         private Label tg;
+        private Label total_ttc;
+        private Label total_tpv;
+        private Label total_general;
     }
 }
