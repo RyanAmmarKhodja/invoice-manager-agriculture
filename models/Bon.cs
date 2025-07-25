@@ -9,16 +9,18 @@ namespace StockIt_2.models
     public class Bon
     {
         public int Id { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public string fournisseur_nom { get; set; }
         public string fournisseur_prenom { get; set; }
         public string transporteur_nom { get; set; }
         public string transporteur_prenom { get; set; }
-        public string designation { get; set; }
-        public string nbr { get; set; }
-        public string poids_kg { get; set; }
-        public string prix_unitaire { get; set; }
-        public string prix_transport_unitaire { get; set; }
-        public string total_amount { get; set; }
+        //public string designation { get; set; }
+        //public int nbr { get; set; }
+        //public double poids_kg { get; set; }
+        //public double prix_unitaire { get; set; }
+        public double prix_transport_unitaire { get; set; }
+        public double total_amount { get; set; }
+
+        public List<Bon_item> Items { get; set; } = new List<Bon_item>();
     }
 }

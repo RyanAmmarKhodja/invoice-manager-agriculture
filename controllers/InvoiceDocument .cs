@@ -15,6 +15,7 @@ namespace StockIt_2.controllers
 {
     public class InvoiceDocument : IDocument
     {
+
         public Bon bon { get; }
 
         public InvoiceDocument(Bon model)
@@ -62,7 +63,7 @@ namespace StockIt_2.controllers
                 row.RelativeItem().Column(column =>
                 {
                     column.Item()
-                        .Text($"Bon de récéption #{bon.Id}")
+                        .Text($"Bon de récéption #{bon.Id}/{bon.Date:y}")
                         .FontSize(20).SemiBold().FontColor(Colors.Blue.Medium);
 
                     column.Item().Text(text =>
@@ -106,6 +107,59 @@ namespace StockIt_2.controllers
                 .AlignCenter()
                 .AlignMiddle()
                 .Text("Table").FontSize(16);
+
+            
+            container.Table(table =>
+            {
+            table.ColumnsDefinition(columns =>
+                    {
+                        columns.ConstantColumn(25);
+                        columns.RelativeColumn(3);
+                        columns.RelativeColumn();
+                        columns.RelativeColumn();
+                        columns.RelativeColumn();
+                    });
+
+                    table.Header(header =>
+                    {
+                        header.Cell().Element(CellStyle).Text("Designation");
+                        header.Cell().Element(CellStyle).Text("NBR");
+                        header.Cell().Element(CellStyle).AlignRight().Text("KG");
+                        header.Cell().Element(CellStyle).AlignRight().Text("PU");
+                        header.Cell().Element(CellStyle).AlignRight().Text("TTC");
+
+                        static IContainer CellStyle(IContainer container)
+                        {
+                            return container.DefaultTextStyle(x => x.SemiBold()).PaddingVertical(5).BorderBottom(1).BorderColor(Colors.Black);
+                        }
+                    });
+
+                static IContainer CellStyle(IContainer container)
+                    {
+                        return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5);
+                    }
+
+
+                //table.Cell().Element(CellStyle).Text(bon.designation);
+                //table.Cell().Element(CellStyle).Text(bon.nbr.ToString());
+                //table.Cell().Element(CellStyle).AlignRight().Text($"{bon.poids_kg} kg");
+                //table.Cell().Element(CellStyle).AlignRight().Text($"{bon.prix_unitaire}$");
+                //table.Cell().Element(CellStyle).AlignRight().Text($"{bon.total_amount}$");
+                //foreach (var item in bon.Items)
+                //{
+                //    table.Cell().Element(CellStyle).Text(Model.Items.IndexOf(item) + 1);
+                //    table.Cell().Element(CellStyle).Text(item.Name);
+                //    table.Cell().Element(CellStyle).AlignRight().Text($"{item.Price}$");
+                //    table.Cell().Element(CellStyle).AlignRight().Text(item.Quantity);
+                //    table.Cell().Element(CellStyle).AlignRight().Text($"{item.Price * item.Quantity}$");
+
+                //    static IContainer CellStyle(IContainer container)
+                //    {
+                //        return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5);
+                //    }
+                //}
+            });
+            
         }
 
         void ComposeComments(IContainer container)

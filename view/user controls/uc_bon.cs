@@ -1,4 +1,5 @@
-﻿using StockIt_2.models;
+﻿using StockIt_2.controllers;
+using StockIt_2.models;
 using StockIt_2.models.GestionBon;
 using StockIt_2.models.GestionCoords;
 using StockIt_2.models.GestionProduit;
@@ -13,6 +14,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
+using QuestPDF.Drawing;
+using QuestPDF.Fluent;
+using QuestPDF.Infrastructure;
+
 
 namespace StockIt_2.view.user_controls
 {
@@ -136,10 +142,6 @@ namespace StockIt_2.view.user_controls
 
         }
 
-
-
-        
-
         private void calculer_ttc()
         {
 
@@ -168,8 +170,8 @@ namespace StockIt_2.view.user_controls
                 ttc = _nombre * _prix;
             }
 
-            tpv = _tpv*_nombre;
-            tg = tpv+ttc;
+            tpv = _tpv * _nombre;
+            tg = tpv + ttc;
             total_general.Text = tg.ToString("F2") + " DZD";
             total_tpv.Text = tpv.ToString("F2") + " DZD";
             total_ttc.Text = ttc.ToString("F2") + " DZD";
@@ -203,23 +205,45 @@ namespace StockIt_2.view.user_controls
 
         private void imprimer_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                // Assuming you have a method to print the bon
                 DateTime Date = DateTime.Now;
-                GestionBon.ajouterBon(
-                    Date,
-                    fnom.Text,
-                    fprenom.Text,
-                    tnom.Text,
-                    tprenom.Text,
-                    combo.SelectedValue.ToString(),
-                    int.Parse(nombre.Text),
-                    double.Parse(poids.Text),
-                    double.Parse(prix_unitaire.Text),
-                    double.Parse(cout_transport.Text),
-                    double.Parse(total_ttc.Text.Replace(" DZD", ""))
-                );
+
+
+                Bon bon = new Bon
+                {
+                    Date = Date,
+                    fournisseur_nom = fnom.Text,
+                    fournisseur_prenom = fprenom.Text,
+                    transporteur_nom = tnom.Text,
+                    transporteur_prenom = tprenom.Text,
+                    //designation = combo.SelectedValue.ToString(),
+                    //nbr = int.Parse(nombre.Text),
+                    //poids_kg = double.Parse(poids.Text),
+                    //prix_unitaire = double.Parse(prix_unitaire.Text),
+                    prix_transport_unitaire = double.Parse(cout_transport.Text),
+                    total_amount = double.Parse(total_general.Text.Replace(" DZD", ""))
+                };
+
+                int bonId = GestionBon.ajouterBon(bon);
+                bon.Id = bonId; // Set the Id of the bon after insertion
+
+
+                Bon_item item = new Bon_item
+                {
+                    designation = combo.SelectedValue.ToString(),
+                    nbr = int.Parse(nombre.Text),
+                    poids_kg = double.Parse(poids.Text),
+                    prix_unitaire = double.Parse(prix_unitaire.Text),
+                    ttc = double.Parse(total_ttc.Text.Replace(" DZD", "")),
+                    bon = bon,
+                };
+                // Assuming you have a method to print the bon
+
+                GestionBonItem.ajouterBonItem(item);
+
+                var document = new InvoiceDocument(bon);
+                document.GeneratePdfAndShow();
 
 
                 MessageBox.Show("Bon imprimé avec succès.");
@@ -228,7 +252,12 @@ namespace StockIt_2.view.user_controls
             {
                 MessageBox.Show("Erreur lors de l'impression du bon: " + ex.Message);
             }
-           
+
+        }
+
+        private void total_ttc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

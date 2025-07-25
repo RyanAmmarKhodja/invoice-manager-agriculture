@@ -689,6 +689,7 @@
             total_ttc.Size = new Size(27, 32);
             total_ttc.TabIndex = 117;
             total_ttc.Text = "0";
+            total_ttc.Click += total_ttc_Click;
             // 
             // total_tpv
             // 
