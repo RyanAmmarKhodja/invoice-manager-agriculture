@@ -14,10 +14,6 @@ namespace StockIt_2.models
         public string fournisseur_prenom { get; set; }
         public string transporteur_nom { get; set; }
         public string transporteur_prenom { get; set; }
-        //public string designation { get; set; }
-        //public int nbr { get; set; }
-        //public double poids_kg { get; set; }
-        //public double prix_unitaire { get; set; }
         public double prix_transport_unitaire { get; set; }
         public double total_amount { get; set; }
 

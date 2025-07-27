@@ -217,10 +217,6 @@ namespace StockIt_2.view.user_controls
                     fournisseur_prenom = fprenom.Text,
                     transporteur_nom = tnom.Text,
                     transporteur_prenom = tprenom.Text,
-                    //designation = combo.SelectedValue.ToString(),
-                    //nbr = int.Parse(nombre.Text),
-                    //poids_kg = double.Parse(poids.Text),
-                    //prix_unitaire = double.Parse(prix_unitaire.Text),
                     prix_transport_unitaire = double.Parse(cout_transport.Text),
                     total_amount = double.Parse(total_general.Text.Replace(" DZD", ""))
                 };
@@ -238,7 +234,9 @@ namespace StockIt_2.view.user_controls
                     ttc = double.Parse(total_ttc.Text.Replace(" DZD", "")),
                     bon = bon,
                 };
-                // Assuming you have a method to print the bon
+
+                bon.Items.Add(item); // Add the item to the bon's items list
+
 
                 GestionBonItem.ajouterBonItem(item);
 

@@ -30,30 +30,20 @@ namespace StockIt_2.controllers
         public void Compose(IDocumentContainer container)
         {
             container
-                .Page(page =>
+            .Page(page =>
+            {
+                page.Margin(50);
+
+                page.Header().Element(ComposeHeader);
+                page.Content().Element(ComposeContent);
+
+                page.Footer().AlignCenter().Text(x =>
                 {
-                    page.Margin(50);
-
-                    page.Header().Height(100).Background(Colors.Grey.Lighten1);
-                    page.Content().Background(Colors.Grey.Lighten3);
-                    page.Footer().Height(50).Background(Colors.Grey.Lighten1);
+                    x.CurrentPageNumber();
+                    x.Span(" / ");
+                    x.TotalPages();
                 });
-       
-            container
-                .Page(page =>
-                {
-                    page.Margin(50);
-
-                    page.Header().Element(ComposeHeader);
-                    page.Content().Element(ComposeContent);
-
-                    page.Footer().AlignCenter().Text(x =>
-                    {
-                        x.CurrentPageNumber();
-                        x.Span(" / ");
-                        x.TotalPages();
-                    });
-                });
+            });
         }
 
         void ComposeHeader(IContainer container)
@@ -81,85 +71,62 @@ namespace StockIt_2.controllers
 
         void ComposeContent(IContainer container)
         {
-            container
-                .PaddingVertical(40)
-                .Height(250)
-                .Background(Colors.Grey.Lighten3)
-                .AlignCenter()
-                .AlignMiddle()
-                .Text("Content").FontSize(16);
+            //container
+            //    .PaddingVertical(40)
+            //    .Height(250)
+            //    .Background(Colors.Grey.Lighten3)
+            //    .AlignCenter()
+            //    .AlignMiddle()
+            //    .Text("Content").FontSize(16);
+
             container.PaddingVertical(40).Column(column =>
             {
                 column.Spacing(5);
-
                 column.Item().Element(ComposeTable);
-
-                //if (!string.IsNullOrWhiteSpace(bon.Comments))
-                //    column.Item().PaddingTop(25).Element(ComposeComments);
             });
         }
 
         void ComposeTable(IContainer container)
         {
-            container
-                .Height(250)
-                .Background(Colors.Grey.Lighten3)
-                .AlignCenter()
-                .AlignMiddle()
-                .Text("Table").FontSize(16);
-
-            
             container.Table(table =>
             {
-            table.ColumnsDefinition(columns =>
+                table.ColumnsDefinition(columns =>
+                {
+                    columns.ConstantColumn(25);
+                    columns.RelativeColumn(3);
+                    columns.RelativeColumn();
+                    columns.RelativeColumn();
+                    columns.RelativeColumn();
+                });
+
+                table.Header(header =>
+                {
+                    header.Cell().Element(CellStyle).Text("Designation");
+                    header.Cell().Element(CellStyle).Text("NBR");
+                    header.Cell().Element(CellStyle).AlignRight().Text("KG");
+                    header.Cell().Element(CellStyle).AlignRight().Text("PU");
+                    header.Cell().Element(CellStyle).AlignRight().Text("TTC");
+
+                    static IContainer CellStyle(IContainer container)
                     {
-                        columns.ConstantColumn(25);
-                        columns.RelativeColumn(3);
-                        columns.RelativeColumn();
-                        columns.RelativeColumn();
-                        columns.RelativeColumn();
-                    });
+                        return container.DefaultTextStyle(x => x.SemiBold()).PaddingVertical(5).BorderBottom(1).BorderColor(Colors.Black);
+                    }
+                });
 
-                    table.Header(header =>
-                    {
-                        header.Cell().Element(CellStyle).Text("Designation");
-                        header.Cell().Element(CellStyle).Text("NBR");
-                        header.Cell().Element(CellStyle).AlignRight().Text("KG");
-                        header.Cell().Element(CellStyle).AlignRight().Text("PU");
-                        header.Cell().Element(CellStyle).AlignRight().Text("TTC");
+                foreach (var item in bon.Items)
+                {
+                    table.Cell().Element(CellStyle).Text(item.designation);
+                    table.Cell().Element(CellStyle).Text(item.nbr);
+                    table.Cell().Element(CellStyle).AlignRight().Text($"{item.poids_kg} KG");
+                    table.Cell().Element(CellStyle).AlignRight().Text(item.prix_unitaire);
+                    table.Cell().Element(CellStyle).AlignRight().Text($"{item.ttc} DZD");
 
-                        static IContainer CellStyle(IContainer container)
-                        {
-                            return container.DefaultTextStyle(x => x.SemiBold()).PaddingVertical(5).BorderBottom(1).BorderColor(Colors.Black);
-                        }
-                    });
-
-                static IContainer CellStyle(IContainer container)
+                    static IContainer CellStyle(IContainer container)
                     {
                         return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5);
                     }
-
-
-                //table.Cell().Element(CellStyle).Text(bon.designation);
-                //table.Cell().Element(CellStyle).Text(bon.nbr.ToString());
-                //table.Cell().Element(CellStyle).AlignRight().Text($"{bon.poids_kg} kg");
-                //table.Cell().Element(CellStyle).AlignRight().Text($"{bon.prix_unitaire}$");
-                //table.Cell().Element(CellStyle).AlignRight().Text($"{bon.total_amount}$");
-                //foreach (var item in bon.Items)
-                //{
-                //    table.Cell().Element(CellStyle).Text(Model.Items.IndexOf(item) + 1);
-                //    table.Cell().Element(CellStyle).Text(item.Name);
-                //    table.Cell().Element(CellStyle).AlignRight().Text($"{item.Price}$");
-                //    table.Cell().Element(CellStyle).AlignRight().Text(item.Quantity);
-                //    table.Cell().Element(CellStyle).AlignRight().Text($"{item.Price * item.Quantity}$");
-
-                //    static IContainer CellStyle(IContainer container)
-                //    {
-                //        return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5);
-                //    }
-                //}
+                }
             });
-            
         }
 
         void ComposeComments(IContainer container)
