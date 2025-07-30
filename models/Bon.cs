@@ -13,8 +13,8 @@ namespace StockIt_2.models
         public Fournisseur fournisseur { get; set; }
         public Transporteur transporteur { get; set; }
         public string category_fournisseur { get; set; }
-        public double prix_transport_unitaire { get; set; }
-        public double total_amount { get; set; }
+        public decimal prix_transport_unitaire { get; set; }
+        public decimal total_amount { get; set; }
 
         public List<Bon_item> Items { get; set; } = new List<Bon_item>();
     }

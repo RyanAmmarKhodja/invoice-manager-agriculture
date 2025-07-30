@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockIt_2
+namespace StockIt_2.controllers
 {
     public static class NavigationMaster
     {

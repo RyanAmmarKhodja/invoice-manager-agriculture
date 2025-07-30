@@ -1,4 +1,5 @@
-﻿using StockIt_2.services.GestionFournisseurs;
+﻿using StockIt_2.controllers;
+using StockIt_2.services.GestionFournisseurs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -11,9 +11,9 @@ namespace StockIt_2.models
         public int Id { get; set; }
         public string designation { get; set; }
         public int nbr { get; set; }
-        public double poids_kg { get; set; }
-        public double prix_unitaire { get; set; }
-        public double ttc { get; set; }    
+        public decimal poids_kg { get; set; }
+        public decimal prix_unitaire { get; set; }
+        public decimal ttc { get; set; }    
         public Bon bon { get; set; }
     }
 }

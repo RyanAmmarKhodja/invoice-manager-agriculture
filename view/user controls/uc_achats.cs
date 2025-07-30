@@ -1,4 +1,5 @@
-﻿using StockIt_2.user_controls;
+﻿using StockIt_2.controllers;
+using StockIt_2.user_controls;
 using StockIt_2.view.user_controls;
 using System;
 using System.Collections.Generic;

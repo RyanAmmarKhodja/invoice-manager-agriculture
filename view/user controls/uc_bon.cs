@@ -53,7 +53,8 @@ namespace StockIt_2.view.user_controls
             cnif.Text = coordonnes.nif;
             cnis.Text = coordonnes.nis;
             cadresse.Text = coordonnes.adresse;
-
+            coords_email.Text = coordonnes.email;
+            coords_tel.Text = coordonnes.tel;
 
         }
 
@@ -128,6 +129,8 @@ namespace StockIt_2.view.user_controls
             {
                 var nouvellesCoordonnes = new Coords
                 {
+                    tel = coords_tel.Text.Trim(),
+                    email = coords_email.Text.Trim(),
                     rc = crc.Text.Trim(),
                     ai = cai.Text.Trim(),
                     nif = cnif.Text.Trim(),
@@ -231,6 +234,11 @@ namespace StockIt_2.view.user_controls
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(nombre.Text))
+                {
+                    throw new ArgumentNullException("Veuillez écrire le nombre.");
+                }
+
                 Fournisseur fournisseur = new Fournisseur
                 {
                     nom = fnom.Text,
@@ -257,14 +265,14 @@ namespace StockIt_2.view.user_controls
 
                 DateTime Date = DateTime.Now;
 
-
+                
                 Bon bon = new Bon
                 {
                     Date = Date,
                     fournisseur = fournisseur,
                     transporteur = transporteur,
-                    prix_transport_unitaire = double.Parse(cout_transport.Text),
-                    total_amount = double.Parse(total_general.Text.Replace(" DZD", ""))
+                    prix_transport_unitaire = decimal.Parse(cout_transport.Text),
+                    total_amount = decimal.Parse(total_general.Text.Replace(" DZD", ""))
                 };
 
                 CheckCategoryFournisseur(bon, fournisseur);
@@ -273,13 +281,18 @@ namespace StockIt_2.view.user_controls
                 bon.Id = bonId; // Set the Id of the bon after insertion
 
 
+                if (String.IsNullOrEmpty(poids.Text))
+                {
+                    poids.Text = "0"; // Default to 0 if poids is not provided
+                }
+
                 Bon_item item = new Bon_item
                 {
                     designation = combo.SelectedValue.ToString(),
                     nbr = int.Parse(nombre.Text),
-                    poids_kg = double.Parse(poids.Text),
-                    prix_unitaire = double.Parse(prix_unitaire.Text),
-                    ttc = double.Parse(total_ttc.Text.Replace(" DZD", "")),
+                    poids_kg = decimal.Parse(poids.Text),
+                    prix_unitaire = decimal.Parse(prix_unitaire.Text),
+                    ttc = decimal.Parse(total_ttc.Text.Replace(" DZD", "")),
                     bon = bon,
                 };
 
@@ -298,12 +311,6 @@ namespace StockIt_2.view.user_controls
             {
                 MessageBox.Show("Erreur lors de l'impression du bon: " + ex.Message);
             }
-
-        }
-
-        private void total_ttc_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,13 +10,6 @@ namespace StockIt_2.models
 {
     public static class Db
     {
-        //public async static void InitializeDatabase()
-        //{
-        //    string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "models", "data.db");
-        //    var conn= new SqliteConnection($"models Source={dbPath}");
-        //    conn.Open();
-
-        //}
 
         private static string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "models", "data.db");
 

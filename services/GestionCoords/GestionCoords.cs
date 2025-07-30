@@ -15,12 +15,7 @@ namespace StockIt_2.services.GestionCoords
             using (var conn = Db.GetConnection())
             {
                 conn.Open();
-
-                // The SQL UPDATE query
-                // IMPORTANT: 'coordonnees' is your table name.
-                // IMPORTANT: 'rc', 'adresse', 'ai', 'nif', 'nis' are your column names.
-                // Make sure these match your actual database schema.
-                string query = "UPDATE coordonnees SET rc = @rc, adresse = @adresse, ai = @ai, nif = @nif, nis = @nis WHERE id = 1";
+                string query = "UPDATE coordonnees SET tel=@tel, email=@email, rc = @rc, adresse = @adresse, ai = @ai, nif = @nif, nis = @nis WHERE id = 1";
 
                 try
                 {
@@ -28,6 +23,8 @@ namespace StockIt_2.services.GestionCoords
                     {
                         // Add parameters to prevent SQL injection
                         cmd.Parameters.AddWithValue("@adresse", updatedCoords.adresse ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@tel", updatedCoords.tel ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@email", updatedCoords.email ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@ai", updatedCoords.ai ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@nif", updatedCoords.nif ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@nis", updatedCoords.nis ?? (object)DBNull.Value);
@@ -63,11 +60,13 @@ namespace StockIt_2.services.GestionCoords
                         while (reader.Read())
                         {
                             coords.id = reader.GetInt32(0); // Column index 0: id
-                            coords.rc = reader.GetString(1); // Column index 0: rc
-                            coords.adresse = reader.GetString(2); // Column index 1: adresse
-                            coords.ai = reader.GetString(3); // Column index 2: ai
-                            coords.nif = reader.GetString(4); // Column index 3: nif
-                            coords.nis = reader.GetString(5); // Column index 4: nis
+                            coords.tel = reader.GetString(1); // Column index 0: rc
+                            coords.email = reader.GetString(2); // Column index 0: rc
+                            coords.rc = reader.GetString(3); // Column index 0: rc
+                            coords.adresse = reader.GetString(4); // Column index 1: adresse
+                            coords.ai = reader.GetString(5); // Column index 2: ai
+                            coords.nif = reader.GetString(6); // Column index 3: nif
+                            coords.nis = reader.GetString(7); // Column index 4: nis
                         }
                     }
                 }

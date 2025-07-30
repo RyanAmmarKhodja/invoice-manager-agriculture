@@ -99,6 +99,10 @@ namespace StockIt_2.view.user_controls
             total_ttc = new Label();
             total_tpv = new Label();
             total_general = new Label();
+            coords_email = new TextBox();
+            label20 = new Label();
+            coords_tel = new TextBox();
+            label32 = new Label();
             ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -525,7 +529,7 @@ namespace StockIt_2.view.user_controls
             // imprimer
             // 
             imprimer.Font = new Font("Segoe UI", 10F);
-            imprimer.Location = new Point(708, 1673);
+            imprimer.Location = new Point(708, 1820);
             imprimer.Name = "imprimer";
             imprimer.Size = new Size(275, 41);
             imprimer.TabIndex = 100;
@@ -545,7 +549,7 @@ namespace StockIt_2.view.user_controls
             // 
             // crc
             // 
-            crc.Location = new Point(200, 1372);
+            crc.Location = new Point(200, 1473);
             crc.Name = "crc";
             crc.Size = new Size(450, 31);
             crc.TabIndex = 102;
@@ -554,7 +558,7 @@ namespace StockIt_2.view.user_controls
             // 
             label27.AutoSize = true;
             label27.Font = new Font("Segoe UI", 12F);
-            label27.Location = new Point(31, 1369);
+            label27.Location = new Point(31, 1470);
             label27.Name = "label27";
             label27.Size = new Size(55, 32);
             label27.TabIndex = 101;
@@ -562,7 +566,7 @@ namespace StockIt_2.view.user_controls
             // 
             // cadresse
             // 
-            cadresse.Location = new Point(200, 1423);
+            cadresse.Location = new Point(200, 1529);
             cadresse.Name = "cadresse";
             cadresse.Size = new Size(450, 31);
             cadresse.TabIndex = 105;
@@ -571,7 +575,7 @@ namespace StockIt_2.view.user_controls
             // 
             label28.AutoSize = true;
             label28.Font = new Font("Segoe UI", 12F);
-            label28.Location = new Point(31, 1420);
+            label28.Location = new Point(31, 1526);
             label28.Name = "label28";
             label28.Size = new Size(109, 32);
             label28.TabIndex = 104;
@@ -579,7 +583,7 @@ namespace StockIt_2.view.user_controls
             // 
             // cai
             // 
-            cai.Location = new Point(200, 1473);
+            cai.Location = new Point(200, 1579);
             cai.Name = "cai";
             cai.Size = new Size(450, 31);
             cai.TabIndex = 107;
@@ -588,7 +592,7 @@ namespace StockIt_2.view.user_controls
             // 
             label29.AutoSize = true;
             label29.Font = new Font("Segoe UI", 12F);
-            label29.Location = new Point(31, 1470);
+            label29.Location = new Point(31, 1576);
             label29.Name = "label29";
             label29.Size = new Size(47, 32);
             label29.TabIndex = 106;
@@ -596,7 +600,7 @@ namespace StockIt_2.view.user_controls
             // 
             // cnif
             // 
-            cnif.Location = new Point(200, 1525);
+            cnif.Location = new Point(200, 1631);
             cnif.Name = "cnif";
             cnif.Size = new Size(450, 31);
             cnif.TabIndex = 109;
@@ -605,7 +609,7 @@ namespace StockIt_2.view.user_controls
             // 
             label30.AutoSize = true;
             label30.Font = new Font("Segoe UI", 12F);
-            label30.Location = new Point(31, 1524);
+            label30.Location = new Point(31, 1630);
             label30.Name = "label30";
             label30.Size = new Size(62, 32);
             label30.TabIndex = 108;
@@ -613,7 +617,7 @@ namespace StockIt_2.view.user_controls
             // 
             // cnis
             // 
-            cnis.Location = new Point(200, 1577);
+            cnis.Location = new Point(200, 1683);
             cnis.Name = "cnis";
             cnis.Size = new Size(450, 31);
             cnis.TabIndex = 111;
@@ -622,7 +626,7 @@ namespace StockIt_2.view.user_controls
             // 
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI", 12F);
-            label31.Location = new Point(31, 1576);
+            label31.Location = new Point(31, 1682);
             label31.Name = "label31";
             label31.Size = new Size(63, 32);
             label31.TabIndex = 110;
@@ -691,7 +695,6 @@ namespace StockIt_2.view.user_controls
             total_ttc.Size = new Size(27, 32);
             total_ttc.TabIndex = 117;
             total_ttc.Text = "0";
-            total_ttc.Click += total_ttc_Click;
             // 
             // total_tpv
             // 
@@ -713,11 +716,49 @@ namespace StockIt_2.view.user_controls
             total_general.TabIndex = 119;
             total_general.Text = "0";
             // 
+            // coords_email
+            // 
+            coords_email.Location = new Point(200, 1423);
+            coords_email.Name = "coords_email";
+            coords_email.Size = new Size(450, 31);
+            coords_email.TabIndex = 121;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 12F);
+            label20.Location = new Point(31, 1420);
+            label20.Name = "label20";
+            label20.Size = new Size(83, 32);
+            label20.TabIndex = 120;
+            label20.Text = "Email :";
+            // 
+            // coords_tel
+            // 
+            coords_tel.Location = new Point(200, 1377);
+            coords_tel.Name = "coords_tel";
+            coords_tel.Size = new Size(450, 31);
+            coords_tel.TabIndex = 123;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 12F);
+            label32.Location = new Point(31, 1374);
+            label32.Name = "label32";
+            label32.Size = new Size(56, 32);
+            label32.TabIndex = 122;
+            label32.Text = "Tel :";
+            // 
             // uc_bon
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(coords_tel);
+            Controls.Add(label32);
+            Controls.Add(coords_email);
+            Controls.Add(label20);
             Controls.Add(total_general);
             Controls.Add(total_tpv);
             Controls.Add(total_ttc);
@@ -786,7 +827,7 @@ namespace StockIt_2.view.user_controls
             Controls.Add(fnom);
             Controls.Add(label1);
             Name = "uc_bon";
-            Size = new Size(1025, 1761);
+            Size = new Size(1025, 1910);
             Load += uc_bon_Load;
             ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).EndInit();
             ResumeLayout(false);
@@ -864,5 +905,9 @@ namespace StockIt_2.view.user_controls
         private Label total_ttc;
         private Label total_tpv;
         private Label total_general;
+        private TextBox coords_email;
+        private Label label20;
+        private TextBox coords_tel;
+        private Label label32;
     }
 }
