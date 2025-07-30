@@ -426,7 +426,7 @@ namespace StockIt_2.view.user_controls
             // 
             // prix_unitaire
             // 
-            prix_unitaire.Location = new Point(200, 1157);
+            prix_unitaire.Location = new Point(200, 1191);
             prix_unitaire.Name = "prix_unitaire";
             prix_unitaire.Size = new Size(124, 31);
             prix_unitaire.TabIndex = 94;
@@ -436,7 +436,7 @@ namespace StockIt_2.view.user_controls
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 12F);
-            label19.Location = new Point(29, 1157);
+            label19.Location = new Point(29, 1191);
             label19.Name = "label19";
             label19.Size = new Size(160, 32);
             label19.TabIndex = 93;
@@ -454,9 +454,9 @@ namespace StockIt_2.view.user_controls
             // 
             // poids
             // 
-            poids.Location = new Point(544, 1102);
+            poids.Location = new Point(200, 1145);
             poids.Name = "poids";
-            poids.Size = new Size(123, 31);
+            poids.Size = new Size(124, 31);
             poids.TabIndex = 87;
             poids.TextChanged += poids_TextChanged;
             // 
@@ -464,7 +464,7 @@ namespace StockIt_2.view.user_controls
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 12F);
-            label23.Location = new Point(363, 1099);
+            label23.Location = new Point(29, 1145);
             label23.Name = "label23";
             label23.Size = new Size(175, 32);
             label23.TabIndex = 86;
@@ -492,7 +492,7 @@ namespace StockIt_2.view.user_controls
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Segoe UI", 12F);
-            label25.Location = new Point(31, 1046);
+            label25.Location = new Point(31, 1048);
             label25.Name = "label25";
             label25.Size = new Size(154, 32);
             label25.TabIndex = 95;
@@ -502,7 +502,7 @@ namespace StockIt_2.view.user_controls
             // 
             total_transport.AutoSize = true;
             total_transport.Font = new Font("Segoe UI", 12F);
-            total_transport.Location = new Point(544, 1204);
+            total_transport.Location = new Point(541, 1243);
             total_transport.Name = "total_transport";
             total_transport.Size = new Size(91, 32);
             total_transport.TabIndex = 97;
@@ -510,7 +510,7 @@ namespace StockIt_2.view.user_controls
             // 
             // cout_transport
             // 
-            cout_transport.Location = new Point(330, 1207);
+            cout_transport.Location = new Point(327, 1246);
             cout_transport.Name = "cout_transport";
             cout_transport.Size = new Size(117, 31);
             cout_transport.TabIndex = 99;
@@ -520,7 +520,7 @@ namespace StockIt_2.view.user_controls
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 12F);
-            label21.Location = new Point(29, 1207);
+            label21.Location = new Point(29, 1245);
             label21.Name = "label21";
             label21.Size = new Size(276, 32);
             label21.TabIndex = 98;
@@ -541,7 +541,7 @@ namespace StockIt_2.view.user_controls
             // 
             label26.AutoSize = true;
             label26.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label26.Location = new Point(31, 1306);
+            label26.Location = new Point(31, 1327);
             label26.Name = "label26";
             label26.Size = new Size(180, 32);
             label26.TabIndex = 103;
@@ -659,7 +659,7 @@ namespace StockIt_2.view.user_controls
             // 
             total_des.AutoSize = true;
             total_des.Font = new Font("Segoe UI", 12F);
-            total_des.Location = new Point(544, 1157);
+            total_des.Location = new Point(360, 1194);
             total_des.Name = "total_des";
             total_des.Size = new Size(84, 32);
             total_des.TabIndex = 114;
@@ -668,7 +668,7 @@ namespace StockIt_2.view.user_controls
             // button4
             // 
             button4.Font = new Font("Segoe UI", 10F);
-            button4.Location = new Point(217, 1303);
+            button4.Location = new Point(217, 1324);
             button4.Name = "button4";
             button4.Size = new Size(275, 41);
             button4.TabIndex = 115;
@@ -680,7 +680,7 @@ namespace StockIt_2.view.user_controls
             // 
             tg.AutoSize = true;
             tg.Font = new Font("Segoe UI", 12F);
-            tg.Location = new Point(567, 1245);
+            tg.Location = new Point(564, 1284);
             tg.Name = "tg";
             tg.Size = new Size(54, 32);
             tg.TabIndex = 116;
@@ -690,7 +690,7 @@ namespace StockIt_2.view.user_controls
             // 
             total_ttc.AutoSize = true;
             total_ttc.Font = new Font("Segoe UI", 12F);
-            total_ttc.Location = new Point(623, 1157);
+            total_ttc.Location = new Point(439, 1194);
             total_ttc.Name = "total_ttc";
             total_ttc.Size = new Size(27, 32);
             total_ttc.TabIndex = 117;
@@ -700,7 +700,7 @@ namespace StockIt_2.view.user_controls
             // 
             total_tpv.AutoSize = true;
             total_tpv.Font = new Font("Segoe UI", 12F);
-            total_tpv.Location = new Point(623, 1204);
+            total_tpv.Location = new Point(620, 1243);
             total_tpv.Name = "total_tpv";
             total_tpv.Size = new Size(27, 32);
             total_tpv.TabIndex = 118;
@@ -710,7 +710,7 @@ namespace StockIt_2.view.user_controls
             // 
             total_general.AutoSize = true;
             total_general.Font = new Font("Segoe UI", 12F);
-            total_general.Location = new Point(623, 1245);
+            total_general.Location = new Point(620, 1284);
             total_general.Name = "total_general";
             total_general.Size = new Size(27, 32);
             total_general.TabIndex = 119;
@@ -827,7 +827,7 @@ namespace StockIt_2.view.user_controls
             Controls.Add(fnom);
             Controls.Add(label1);
             Name = "uc_bon";
-            Size = new Size(1025, 1910);
+            Size = new Size(1252, 1910);
             Load += uc_bon_Load;
             ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).EndInit();
             ResumeLayout(false);
