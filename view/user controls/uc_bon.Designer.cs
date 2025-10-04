@@ -32,36 +32,21 @@ namespace StockIt_2.view.user_controls
         {
             components = new System.ComponentModel.Container();
             fadresse = new TextBox();
-            label11 = new Label();
             facture = new TextBox();
-            label10 = new Label();
             bl = new TextBox();
-            label9 = new Label();
             ftel = new TextBox();
-            label8 = new Label();
             nis = new TextBox();
-            label7 = new Label();
             nif = new TextBox();
-            label6 = new Label();
             ai = new TextBox();
-            label5 = new Label();
             rc = new TextBox();
-            label4 = new Label();
             fprenom = new TextBox();
-            label2 = new Label();
             fnom = new TextBox();
-            label1 = new Label();
             tadresse = new TextBox();
-            label3 = new Label();
             ttel = new TextBox();
-            label12 = new Label();
             matricule = new TextBox();
-            label13 = new Label();
             label14 = new Label();
             tprenom = new TextBox();
-            label15 = new Label();
             tnom = new TextBox();
-            label16 = new Label();
             label17 = new Label();
             label18 = new Label();
             choisir_fournisseur = new Button();
@@ -103,235 +88,140 @@ namespace StockIt_2.view.user_controls
             label20 = new Label();
             coords_tel = new TextBox();
             label32 = new Label();
+            kryptonContextMenu1 = new Krypton.Toolkit.KryptonContextMenu();
+            kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
+            kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            kryptonLabel15 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel14 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel13 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
+            kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanel2).BeginInit();
+            kryptonPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // fadresse
             // 
-            fadresse.Location = new Point(144, 203);
+            fadresse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            fadresse.Location = new Point(140, 91);
             fadresse.Name = "fadresse";
-            fadresse.Size = new Size(729, 31);
+            fadresse.Size = new Size(727, 31);
             fadresse.TabIndex = 66;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F);
-            label11.Location = new Point(29, 200);
-            label11.Name = "label11";
-            label11.Size = new Size(109, 32);
-            label11.TabIndex = 65;
-            label11.Text = "Adresse :";
             // 
             // facture
             // 
-            facture.Location = new Point(200, 579);
+            facture.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            facture.Location = new Point(140, 490);
             facture.Name = "facture";
-            facture.Size = new Size(357, 31);
+            facture.Size = new Size(302, 31);
             facture.TabIndex = 64;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F);
-            label10.Location = new Point(31, 576);
-            label10.Name = "label10";
-            label10.Size = new Size(156, 32);
-            label10.TabIndex = 63;
-            label10.Text = "N° FACTURE :";
             // 
             // bl
             // 
-            bl.Location = new Point(109, 532);
+            bl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            bl.Location = new Point(140, 430);
             bl.Name = "bl";
-            bl.Size = new Size(357, 31);
+            bl.Size = new Size(302, 31);
             bl.TabIndex = 62;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F);
-            label9.Location = new Point(31, 529);
-            label9.Name = "label9";
-            label9.Size = new Size(78, 32);
-            label9.TabIndex = 61;
-            label9.Text = "N°BL :";
             // 
             // ftel
             // 
-            ftel.Location = new Point(109, 476);
+            ftel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            ftel.Location = new Point(140, 374);
             ftel.Name = "ftel";
-            ftel.Size = new Size(357, 31);
+            ftel.Size = new Size(302, 31);
             ftel.TabIndex = 60;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F);
-            label8.Location = new Point(31, 473);
-            label8.Name = "label8";
-            label8.Size = new Size(62, 32);
-            label8.TabIndex = 59;
-            label8.Text = "TEL :";
             // 
             // nis
             // 
-            nis.Location = new Point(109, 417);
+            nis.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            nis.Location = new Point(140, 318);
             nis.Name = "nis";
-            nis.Size = new Size(357, 31);
+            nis.Size = new Size(302, 31);
             nis.TabIndex = 58;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(31, 416);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 32);
-            label7.TabIndex = 57;
-            label7.Text = "NIS :";
             // 
             // nif
             // 
-            nif.Location = new Point(109, 360);
+            nif.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            nif.Location = new Point(140, 259);
             nif.Name = "nif";
-            nif.Size = new Size(357, 31);
+            nif.Size = new Size(302, 31);
             nif.TabIndex = 56;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(31, 357);
-            label6.Name = "label6";
-            label6.Size = new Size(62, 32);
-            label6.TabIndex = 55;
-            label6.Text = "NIF :";
             // 
             // ai
             // 
-            ai.Location = new Point(109, 303);
+            ai.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            ai.Location = new Point(140, 202);
             ai.Name = "ai";
-            ai.Size = new Size(357, 31);
+            ai.Size = new Size(302, 31);
             ai.TabIndex = 54;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(31, 302);
-            label5.Name = "label5";
-            label5.Size = new Size(47, 32);
-            label5.TabIndex = 53;
-            label5.Text = "AI :";
             // 
             // rc
             // 
-            rc.Location = new Point(109, 249);
+            rc.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            rc.Location = new Point(140, 145);
             rc.Name = "rc";
-            rc.Size = new Size(357, 31);
+            rc.Size = new Size(302, 31);
             rc.TabIndex = 52;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(31, 249);
-            label4.Name = "label4";
-            label4.Size = new Size(55, 32);
-            label4.TabIndex = 51;
-            label4.Text = "RC :";
             // 
             // fprenom
             // 
-            fprenom.Location = new Point(575, 157);
+            fprenom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            fprenom.Location = new Point(569, 42);
             fprenom.Name = "fprenom";
             fprenom.Size = new Size(298, 31);
             fprenom.TabIndex = 50;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(455, 154);
-            label2.Name = "label2";
-            label2.Size = new Size(109, 32);
-            label2.TabIndex = 49;
-            label2.Text = "Prénom :";
-            // 
             // fnom
             // 
-            fnom.Location = new Point(109, 157);
+            fnom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            fnom.Location = new Point(140, 42);
             fnom.Name = "fnom";
             fnom.Size = new Size(298, 31);
             fnom.TabIndex = 48;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(31, 154);
-            label1.Name = "label1";
-            label1.Size = new Size(79, 32);
-            label1.TabIndex = 47;
-            label1.Text = "Nom :";
-            // 
             // tadresse
             // 
-            tadresse.Location = new Point(163, 815);
+            tadresse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            tadresse.Location = new Point(140, 63);
             tadresse.Name = "tadresse";
             tadresse.Size = new Size(727, 31);
             tadresse.TabIndex = 77;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(31, 812);
-            label3.Name = "label3";
-            label3.Size = new Size(109, 32);
-            label3.TabIndex = 76;
-            label3.Text = "Adresse :";
-            // 
             // ttel
             // 
-            ttel.Location = new Point(163, 911);
+            ttel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            ttel.Location = new Point(140, 169);
             ttel.Name = "ttel";
-            ttel.Size = new Size(357, 31);
+            ttel.Size = new Size(302, 31);
             ttel.TabIndex = 75;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F);
-            label12.Location = new Point(31, 908);
-            label12.Name = "label12";
-            label12.Size = new Size(62, 32);
-            label12.TabIndex = 74;
-            label12.Text = "TEL :";
             // 
             // matricule
             // 
-            matricule.Location = new Point(163, 861);
+            matricule.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            matricule.Location = new Point(140, 116);
             matricule.Name = "matricule";
-            matricule.Size = new Size(357, 31);
+            matricule.Size = new Size(302, 31);
             matricule.TabIndex = 73;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F);
-            label13.Location = new Point(31, 858);
-            label13.Name = "label13";
-            label13.Size = new Size(126, 32);
-            label13.TabIndex = 72;
-            label13.Text = "Matricule :";
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label14.Location = new Point(31, 687);
+            label14.Location = new Point(176, 696);
             label14.Name = "label14";
             label14.Size = new Size(290, 32);
             label14.TabIndex = 71;
@@ -339,43 +229,26 @@ namespace StockIt_2.view.user_controls
             // 
             // tprenom
             // 
-            tprenom.Location = new Point(575, 764);
+            tprenom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            tprenom.Location = new Point(569, 13);
             tprenom.Name = "tprenom";
             tprenom.Size = new Size(315, 31);
             tprenom.TabIndex = 70;
             // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 12F);
-            label15.Location = new Point(455, 761);
-            label15.Name = "label15";
-            label15.Size = new Size(109, 32);
-            label15.TabIndex = 69;
-            label15.Text = "Prénom :";
-            // 
             // tnom
             // 
-            tnom.Location = new Point(109, 764);
+            tnom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            tnom.Location = new Point(140, 13);
             tnom.Name = "tnom";
-            tnom.Size = new Size(298, 31);
+            tnom.Size = new Size(302, 31);
             tnom.TabIndex = 68;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 12F);
-            label16.Location = new Point(31, 761);
-            label16.Name = "label16";
-            label16.Size = new Size(79, 32);
-            label16.TabIndex = 67;
-            label16.Text = "Nom :";
             // 
             // label17
             // 
+            label17.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label17.Location = new Point(31, 92);
+            label17.Location = new Point(176, 72);
             label17.Name = "label17";
             label17.Size = new Size(275, 32);
             label17.TabIndex = 78;
@@ -393,8 +266,9 @@ namespace StockIt_2.view.user_controls
             // 
             // choisir_fournisseur
             // 
+            choisir_fournisseur.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             choisir_fournisseur.Font = new Font("Segoe UI", 10F);
-            choisir_fournisseur.Location = new Point(332, 92);
+            choisir_fournisseur.Location = new Point(794, 69);
             choisir_fournisseur.Name = "choisir_fournisseur";
             choisir_fournisseur.Size = new Size(275, 41);
             choisir_fournisseur.TabIndex = 80;
@@ -405,7 +279,7 @@ namespace StockIt_2.view.user_controls
             // button1
             // 
             button1.Font = new Font("Segoe UI", 10F);
-            button1.Location = new Point(327, 684);
+            button1.Location = new Point(794, 693);
             button1.Name = "button1";
             button1.Size = new Size(275, 41);
             button1.TabIndex = 81;
@@ -750,11 +624,198 @@ namespace StockIt_2.view.user_controls
             label32.TabIndex = 122;
             label32.Text = "Tel :";
             // 
+            // kryptonPanel1
+            // 
+            kryptonPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            kryptonPanel1.Controls.Add(kryptonLabel10);
+            kryptonPanel1.Controls.Add(kryptonLabel9);
+            kryptonPanel1.Controls.Add(kryptonLabel8);
+            kryptonPanel1.Controls.Add(kryptonLabel7);
+            kryptonPanel1.Controls.Add(kryptonLabel6);
+            kryptonPanel1.Controls.Add(kryptonLabel5);
+            kryptonPanel1.Controls.Add(kryptonLabel4);
+            kryptonPanel1.Controls.Add(kryptonLabel3);
+            kryptonPanel1.Controls.Add(kryptonLabel2);
+            kryptonPanel1.Controls.Add(kryptonLabel1);
+            kryptonPanel1.Controls.Add(fnom);
+            kryptonPanel1.Controls.Add(fprenom);
+            kryptonPanel1.Controls.Add(fadresse);
+            kryptonPanel1.Controls.Add(rc);
+            kryptonPanel1.Controls.Add(ai);
+            kryptonPanel1.Controls.Add(nif);
+            kryptonPanel1.Controls.Add(nis);
+            kryptonPanel1.Controls.Add(ftel);
+            kryptonPanel1.Controls.Add(bl);
+            kryptonPanel1.Controls.Add(facture);
+            kryptonPanel1.Location = new Point(176, 113);
+            kryptonPanel1.Name = "kryptonPanel1";
+            kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.HeaderForm;
+            kryptonPanel1.Size = new Size(893, 541);
+            kryptonPanel1.TabIndex = 124;
+            // 
+            // kryptonLabel10
+            // 
+            kryptonLabel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel10.Location = new Point(13, 492);
+            kryptonLabel10.Name = "kryptonLabel10";
+            kryptonLabel10.Size = new Size(123, 29);
+            kryptonLabel10.TabIndex = 74;
+            kryptonLabel10.Values.Text = "N° FACTURE :";
+            // 
+            // kryptonLabel9
+            // 
+            kryptonLabel9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel9.Location = new Point(13, 432);
+            kryptonLabel9.Name = "kryptonLabel9";
+            kryptonLabel9.Size = new Size(62, 29);
+            kryptonLabel9.TabIndex = 73;
+            kryptonLabel9.Values.Text = "N°BL :";
+            // 
+            // kryptonLabel8
+            // 
+            kryptonLabel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel8.Location = new Point(13, 376);
+            kryptonLabel8.Name = "kryptonLabel8";
+            kryptonLabel8.Size = new Size(49, 29);
+            kryptonLabel8.TabIndex = 72;
+            kryptonLabel8.Values.Text = "TEL :";
+            // 
+            // kryptonLabel7
+            // 
+            kryptonLabel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel7.Location = new Point(13, 320);
+            kryptonLabel7.Name = "kryptonLabel7";
+            kryptonLabel7.Size = new Size(50, 29);
+            kryptonLabel7.TabIndex = 71;
+            kryptonLabel7.Values.Text = "NIS :";
+            // 
+            // kryptonLabel6
+            // 
+            kryptonLabel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel6.Location = new Point(13, 261);
+            kryptonLabel6.Name = "kryptonLabel6";
+            kryptonLabel6.Size = new Size(49, 29);
+            kryptonLabel6.TabIndex = 70;
+            kryptonLabel6.Values.Text = "NIF :";
+            // 
+            // kryptonLabel5
+            // 
+            kryptonLabel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel5.Location = new Point(13, 204);
+            kryptonLabel5.Name = "kryptonLabel5";
+            kryptonLabel5.Size = new Size(38, 29);
+            kryptonLabel5.TabIndex = 69;
+            kryptonLabel5.Values.Text = "AI :";
+            // 
+            // kryptonLabel4
+            // 
+            kryptonLabel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel4.Location = new Point(13, 145);
+            kryptonLabel4.Name = "kryptonLabel4";
+            kryptonLabel4.Size = new Size(44, 29);
+            kryptonLabel4.TabIndex = 68;
+            kryptonLabel4.Values.Text = "RC :";
+            // 
+            // kryptonLabel3
+            // 
+            kryptonLabel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel3.Location = new Point(13, 93);
+            kryptonLabel3.Name = "kryptonLabel3";
+            kryptonLabel3.Size = new Size(86, 29);
+            kryptonLabel3.TabIndex = 67;
+            kryptonLabel3.Values.Text = "Adresse :";
+            // 
+            // kryptonLabel2
+            // 
+            kryptonLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel2.Location = new Point(476, 44);
+            kryptonLabel2.Name = "kryptonLabel2";
+            kryptonLabel2.Size = new Size(85, 29);
+            kryptonLabel2.TabIndex = 51;
+            kryptonLabel2.Values.Text = "Prénom :";
+            // 
+            // kryptonLabel1
+            // 
+            kryptonLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel1.Location = new Point(13, 44);
+            kryptonLabel1.Name = "kryptonLabel1";
+            kryptonLabel1.Size = new Size(62, 29);
+            kryptonLabel1.TabIndex = 0;
+            kryptonLabel1.Values.Text = "Nom :";
+            kryptonLabel1.Click += kryptonLabel1_Click;
+            // 
+            // kryptonPanel2
+            // 
+            kryptonPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            kryptonPanel2.Controls.Add(kryptonLabel15);
+            kryptonPanel2.Controls.Add(kryptonLabel14);
+            kryptonPanel2.Controls.Add(kryptonLabel13);
+            kryptonPanel2.Controls.Add(kryptonLabel11);
+            kryptonPanel2.Controls.Add(kryptonLabel12);
+            kryptonPanel2.Controls.Add(tnom);
+            kryptonPanel2.Controls.Add(tprenom);
+            kryptonPanel2.Controls.Add(tadresse);
+            kryptonPanel2.Controls.Add(matricule);
+            kryptonPanel2.Controls.Add(ttel);
+            kryptonPanel2.Location = new Point(176, 740);
+            kryptonPanel2.Margin = new Padding(50, 3, 50, 3);
+            kryptonPanel2.Name = "kryptonPanel2";
+            kryptonPanel2.Size = new Size(893, 279);
+            kryptonPanel2.TabIndex = 125;
+            // 
+            // kryptonLabel15
+            // 
+            kryptonLabel15.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel15.Location = new Point(13, 118);
+            kryptonLabel15.Name = "kryptonLabel15";
+            kryptonLabel15.Size = new Size(98, 29);
+            kryptonLabel15.TabIndex = 80;
+            kryptonLabel15.Values.Text = "Matricule :";
+            // 
+            // kryptonLabel14
+            // 
+            kryptonLabel14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel14.Location = new Point(14, 171);
+            kryptonLabel14.Name = "kryptonLabel14";
+            kryptonLabel14.Size = new Size(49, 29);
+            kryptonLabel14.TabIndex = 79;
+            kryptonLabel14.Values.Text = "TEL :";
+            // 
+            // kryptonLabel13
+            // 
+            kryptonLabel13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel13.Location = new Point(13, 65);
+            kryptonLabel13.Name = "kryptonLabel13";
+            kryptonLabel13.Size = new Size(86, 29);
+            kryptonLabel13.TabIndex = 78;
+            kryptonLabel13.Values.Text = "Adresse :";
+            // 
+            // kryptonLabel11
+            // 
+            kryptonLabel11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel11.Location = new Point(476, 15);
+            kryptonLabel11.Name = "kryptonLabel11";
+            kryptonLabel11.Size = new Size(85, 29);
+            kryptonLabel11.TabIndex = 70;
+            kryptonLabel11.Values.Text = "Prénom :";
+            // 
+            // kryptonLabel12
+            // 
+            kryptonLabel12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            kryptonLabel12.Location = new Point(13, 15);
+            kryptonLabel12.Name = "kryptonLabel12";
+            kryptonLabel12.Size = new Size(62, 29);
+            kryptonLabel12.TabIndex = 69;
+            kryptonLabel12.Values.Text = "Nom :";
+            // 
             // uc_bon
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(kryptonPanel2);
+            Controls.Add(label17);
+            Controls.Add(kryptonPanel1);
             Controls.Add(coords_tel);
             Controls.Add(label32);
             Controls.Add(coords_email);
@@ -773,6 +834,7 @@ namespace StockIt_2.view.user_controls
             Controls.Add(label30);
             Controls.Add(cai);
             Controls.Add(label29);
+            Controls.Add(choisir_fournisseur);
             Controls.Add(cadresse);
             Controls.Add(label28);
             Controls.Add(label26);
@@ -792,44 +854,19 @@ namespace StockIt_2.view.user_controls
             Controls.Add(label24);
             Controls.Add(button3);
             Controls.Add(button1);
-            Controls.Add(choisir_fournisseur);
             Controls.Add(label18);
-            Controls.Add(label17);
-            Controls.Add(tadresse);
-            Controls.Add(label3);
-            Controls.Add(ttel);
-            Controls.Add(label12);
-            Controls.Add(matricule);
-            Controls.Add(label13);
             Controls.Add(label14);
-            Controls.Add(tprenom);
-            Controls.Add(label15);
-            Controls.Add(tnom);
-            Controls.Add(label16);
-            Controls.Add(fadresse);
-            Controls.Add(label11);
-            Controls.Add(facture);
-            Controls.Add(label10);
-            Controls.Add(bl);
-            Controls.Add(label9);
-            Controls.Add(ftel);
-            Controls.Add(label8);
-            Controls.Add(nis);
-            Controls.Add(label7);
-            Controls.Add(nif);
-            Controls.Add(label6);
-            Controls.Add(ai);
-            Controls.Add(label5);
-            Controls.Add(rc);
-            Controls.Add(label4);
-            Controls.Add(fprenom);
-            Controls.Add(label2);
-            Controls.Add(fnom);
-            Controls.Add(label1);
+            Margin = new Padding(50, 3, 50, 3);
             Name = "uc_bon";
             Size = new Size(1252, 1910);
             Load += uc_bon_Load;
             ((System.ComponentModel.ISupportInitialize)gestionProduitBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
+            kryptonPanel1.ResumeLayout(false);
+            kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanel2).EndInit();
+            kryptonPanel2.ResumeLayout(false);
+            kryptonPanel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -837,36 +874,21 @@ namespace StockIt_2.view.user_controls
         #endregion
 
         private TextBox fadresse;
-        private Label label11;
         private TextBox facture;
-        private Label label10;
         private TextBox bl;
-        private Label label9;
         private TextBox ftel;
-        private Label label8;
         private TextBox nis;
-        private Label label7;
         private TextBox nif;
-        private Label label6;
         private TextBox ai;
-        private Label label5;
         private TextBox rc;
-        private Label label4;
         private TextBox fprenom;
-        private Label label2;
         private TextBox fnom;
-        private Label label1;
         private TextBox tadresse;
-        private Label label3;
         private TextBox ttel;
-        private Label label12;
         private TextBox matricule;
-        private Label label13;
         private Label label14;
         private TextBox tprenom;
-        private Label label15;
         private TextBox tnom;
-        private Label label16;
         private Label label17;
         private Label label18;
         private Button choisir_fournisseur;
@@ -909,5 +931,23 @@ namespace StockIt_2.view.user_controls
         private Label label20;
         private TextBox coords_tel;
         private Label label32;
+        private Krypton.Toolkit.KryptonContextMenu kryptonContextMenu1;
+        private Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel15;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel14;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel12;
     }
 }

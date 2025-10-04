@@ -36,8 +36,8 @@
             gerer_transporteur = new Button();
             gerer_fournisseur = new Button();
             creer_fournisseur = new Button();
-            bon_reception = new Button();
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
+            bon_reception = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             kryptonPanel1.SuspendLayout();
             SuspendLayout();
@@ -115,32 +115,31 @@
             creer_fournisseur.UseVisualStyleBackColor = true;
             creer_fournisseur.Click += fournisseur_Click;
             // 
-            // bon_reception
-            // 
-            bon_reception.Font = new Font("Segoe UI", 10F);
-            bon_reception.Location = new Point(3, 70);
-            bon_reception.Name = "bon_reception";
-            bon_reception.Size = new Size(295, 65);
-            bon_reception.TabIndex = 1;
-            bon_reception.Text = "Créer un bon de récéption";
-            bon_reception.UseVisualStyleBackColor = true;
-            bon_reception.Click += bon_reception_Click;
-            // 
             // kryptonPanel1
             // 
             kryptonPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            kryptonPanel1.Controls.Add(bon_reception);
             kryptonPanel1.Controls.Add(gerer_transporteur);
             kryptonPanel1.Controls.Add(label1);
             kryptonPanel1.Controls.Add(button3);
             kryptonPanel1.Controls.Add(gerer_fournisseur);
             kryptonPanel1.Controls.Add(retour);
-            kryptonPanel1.Controls.Add(bon_reception);
             kryptonPanel1.Controls.Add(creer_fournisseur);
             kryptonPanel1.Controls.Add(transporteurBtn);
-            kryptonPanel1.Location = new Point(0, 3);
+            kryptonPanel1.Location = new Point(0, 0);
             kryptonPanel1.Name = "kryptonPanel1";
-            kryptonPanel1.Size = new Size(691, 447);
+            kryptonPanel1.Size = new Size(691, 450);
             kryptonPanel1.TabIndex = 9;
+            // 
+            // bon_reception
+            // 
+            bon_reception.Location = new Point(3, 56);
+            bon_reception.Name = "bon_reception";
+            bon_reception.Size = new Size(295, 65);
+            bon_reception.TabIndex = 8;
+            bon_reception.Values.DropDownArrowColor = Color.Empty;
+            bon_reception.Values.Text = "Créer un bon de récéption";
+            bon_reception.Click += bon_reception_Click;
             // 
             // uc_achats
             // 
@@ -164,7 +163,8 @@
         private Button gerer_transporteur;
         private Button gerer_fournisseur;
         private Button creer_fournisseur;
-        private Button bon_reception;
+       // private Button bon_reception;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private Krypton.Toolkit.KryptonButton bon_reception;
     }
 }

@@ -265,7 +265,7 @@ namespace StockIt_2.view.user_controls
 
                 DateTime Date = DateTime.Now;
 
-                
+
                 Bon bon = new Bon
                 {
                     Date = Date,
@@ -311,6 +311,21 @@ namespace StockIt_2.view.user_controls
             {
                 MessageBox.Show("Erreur lors de l'impression du bon: " + ex.Message);
             }
+        }
+
+        private void kryptonGroupBox1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonGroupBox1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
