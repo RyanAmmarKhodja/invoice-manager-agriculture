@@ -61,7 +61,7 @@ StockIt-2/
 ##  Features
 
 ### Core Business Features
-<p align="center"> <img src="preview/interface0.png" width="45%" /> <img src="preview/interface1.png" width="45%" /> </p>
+<p align="center"> <img src="preview/interface1.jpeg" width="45%" /> <img src="preview/interface0.jpeg" width="45%" /> </p>
 
 ####  Supplier Management
 - Create, read, and update supplier information
