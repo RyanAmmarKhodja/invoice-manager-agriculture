@@ -230,10 +230,6 @@ StockIt-2/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-##  License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ##  Support
 
 For support and questions:
@@ -243,4 +239,4 @@ For support and questions:
 
 ---
 
-**StockIt 2** - Professional stock management simplified for Algerian businesses.
+**StockIt 2** - Professional invoice management simplified for Algerian businesses.
